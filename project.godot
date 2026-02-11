@@ -23,6 +23,7 @@ PhysicsManager="*res://scripts/managers/PhysicsManager.gd"
 LevelManager="*res://scripts/managers/LevelManager.gd"
 AudioManager="*res://scripts/managers/AudioManager.gd"
 ParticleFactory="*res://scripts/utility/ParticleFactory.gd"
+AnalyticsManager="*res://scripts/managers/AnalyticsManager.gd"
 
 [display]
 
