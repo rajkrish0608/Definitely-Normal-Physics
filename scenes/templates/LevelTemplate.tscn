@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8j2x4k5l6m7n"]
+
+[ext_resource type="Script" path="res://scripts/templates/LevelTemplate.gd" id="1_script"]
+
+[node name="LevelTemplate" type="Node2D"]
+script = ExtResource("1_script")
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="TileMap" type="TileMap" parent="World"]
+format = 2
+
+[node name="Hazards" type="Node2D" parent="World"]
+
+[node name="Checkpoints" type="Node2D" parent="World"]
+
+[node name="Triggers" type="Node2D" parent="World"]
+
+[node name="SpawnPoint" type="Marker2D" parent="."]
+position = Vector2(100, 500)
+gizmo_extents = 30.0
+
+[node name="ExitPoint" type="Area2D" parent="."]
+position = Vector2(1800, 500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitPoint"]
+debug_color = Color(0, 0.6, 0.701961, 0.419608)

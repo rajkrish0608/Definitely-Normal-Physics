@@ -234,6 +234,19 @@ const STATE_COLORS: Dictionary = {
 	"ZeroFriction": Color(0.67, 0.87, 1.0),     # Icy Blue
 	"SuperFriction": Color(0.55, 0.27, 0.07),   # Mud Brown
 	"BouncyPhysics": Color(1, 0.41, 0.71),      # Hot Pink
+	"SlowMotion": Color(0.8, 0.8, 0.8),         # Light Gray
+	"FastForward": Color(1.0, 1.0, 0.0),        # Yellow
+	"TeleportJump": Color(0.5, 0.0, 0.5),       # Purple
+	"DoubleJump": Color(0.0, 1.0, 0.0),         # Green
+	"InvertedControls": Color(0.8, 0.0, 0.8),   # Magenta
+	"DelayedInput": Color(0.5, 0.5, 0.5),       # Gray
+	"RandomDirection": Color(1.0, 0.5, 0.0),    # Orange
+	"SizeChange": Color(1.0, 0.8, 0.6),         # Flesh/Peach
+	"Underwater": Color(0.0, 0.3, 0.8),         # Deep Blue
+	"WindForce": Color(0.8, 0.9, 1.0),          # Windy White
+	"PhaseThrough": Color(1.0, 1.0, 1.0, 0.5),  # Transparent White
+	"MagnetPlatforms": Color(0.6, 0.6, 0.6),    # Iron/Steel
+	"WallWalk": Color(0.4, 0.2, 0.0),           # Spider Brown
 }
 
 

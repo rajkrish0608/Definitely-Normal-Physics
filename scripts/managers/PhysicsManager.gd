@@ -63,6 +63,20 @@ func _load_all_states() -> void:
 		preload("res://scripts/physics_states/ZeroFriction.gd"),
 		preload("res://scripts/physics_states/SuperFriction.gd"),
 		preload("res://scripts/physics_states/BouncyPhysics.gd"),
+		# Extended States (World 4+)
+		preload("res://scripts/physics_states/SlowMotion.gd"),
+		preload("res://scripts/physics_states/FastForward.gd"),
+		preload("res://scripts/physics_states/TeleportJump.gd"),
+		preload("res://scripts/physics_states/DoubleJump.gd"),
+		preload("res://scripts/physics_states/InvertedControls.gd"),
+		preload("res://scripts/physics_states/DelayedInput.gd"),
+		preload("res://scripts/physics_states/RandomDirection.gd"),
+		preload("res://scripts/physics_states/SizeChange.gd"),
+		preload("res://scripts/physics_states/Underwater.gd"),
+		preload("res://scripts/physics_states/WindForce.gd"),
+		preload("res://scripts/physics_states/PhaseThrough.gd"),
+		preload("res://scripts/physics_states/MagnetPlatforms.gd"),
+		preload("res://scripts/physics_states/WallWalk.gd"),
 	]
 
 	for script in state_classes:

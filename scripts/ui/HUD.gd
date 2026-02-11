@@ -26,6 +26,19 @@ const STATE_DISPLAY: Dictionary = {
 	"ZeroFriction": {"label": "🧊 ICE", "color": Color(0.67, 0.87, 1.0)},
 	"SuperFriction": {"label": "🫠 MUD", "color": Color(0.55, 0.27, 0.07)},
 	"BouncyPhysics": {"label": "🦘 BOUNCE", "color": Color(1, 0.41, 0.71)},
+	"SlowMotion": {"label": "🐌 SLOW-MO", "color": Color(0.8, 0.8, 0.8)},
+	"FastForward": {"label": "⏩ FAST-FWD", "color": Color(1.0, 1.0, 0.0)},
+	"TeleportJump": {"label": "✨ TELEPORT", "color": Color(0.5, 0.0, 0.5)},
+	"DoubleJump": {"label": "🐇 DOUBLE", "color": Color(0.0, 1.0, 0.0)},
+	"InvertedControls": {"label": "😵 CONFUSED", "color": Color(0.8, 0.0, 0.8)},
+	"DelayedInput": {"label": "🐢 LAG", "color": Color(0.5, 0.5, 0.5)},
+	"RandomDirection": {"label": "🎲 CHAOS", "color": Color(1.0, 0.5, 0.0)},
+	"SizeChange": {"label": "🍄 GIANT", "color": Color(1.0, 0.8, 0.6)},
+	"Underwater": {"label": "🫧 WATER", "color": Color(0.0, 0.3, 0.8)},
+	"WindForce": {"label": "💨 WINDY", "color": Color(0.8, 0.9, 1.0)},
+	"PhaseThrough": {"label": "👻 GHOST", "color": Color(1.0, 1.0, 1.0)},
+	"MagnetPlatforms": {"label": "🧲 MAGNET", "color": Color(0.6, 0.6, 0.6)},
+	"WallWalk": {"label": "🕷️ SPIDER", "color": Color(0.4, 0.2, 0.0)},
 }
 
 
