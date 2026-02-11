@@ -18,6 +18,12 @@ func _ready() -> void:
 	hide()
 	process_mode = Node.PROCESS_MODE_ALWAYS  # Respond to input even when paused
 
+	# Set up scientific/test theme copy
+	$CenterContainer/VBoxContainer/ResumeButton.text = "Continue Testing"
+	$CenterContainer/VBoxContainer/RestartButton.text = "Retry Experiment"
+	$CenterContainer/VBoxContainer/SettingsButton.text = "Parameters"
+	$CenterContainer/VBoxContainer/QuitButton.text = "Abort to Menu"
+
 	$CenterContainer/VBoxContainer/ResumeButton.pressed.connect(_on_resume_pressed)
 	$CenterContainer/VBoxContainer/RestartButton.pressed.connect(_on_restart_pressed)
 	$CenterContainer/VBoxContainer/SettingsButton.pressed.connect(_on_settings_pressed)

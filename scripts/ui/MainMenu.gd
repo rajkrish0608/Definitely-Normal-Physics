@@ -15,6 +15,12 @@ extends Control
 
 
 func _ready() -> void:
+	# Set up scientific/test theme copy
+	$MarginContainer/VBoxContainer/PlayButton.text = "Initiate Test"
+	$MarginContainer/VBoxContainer/LevelSelectButton.text = "Select Experiment"
+	$MarginContainer/VBoxContainer/SettingsButton.text = "Parameters"
+	$MarginContainer/VBoxContainer/QuitButton.text = "Abort Simulation"
+
 	# Connect button signals (adjust node paths as needed)
 	$MarginContainer/VBoxContainer/PlayButton.pressed.connect(_on_play_pressed)
 	$MarginContainer/VBoxContainer/LevelSelectButton.pressed.connect(_on_level_select_pressed)

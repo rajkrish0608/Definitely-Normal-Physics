@@ -14,13 +14,21 @@ extends Control
 
 ## Funny death messages to rotate through.
 const DEATH_MESSAGES: Array[String] = [
-	"Oops!",
-	"Not quite...",
-	"Physics are hard!",
-	"Try again!",
-	"Definitely normal!",
-	"That wasn't supposed to happen...",
-	"Gravity wins again!",
+	"Have you tried not dying?",
+	"Gravity 1, You 0.",
+	"Working as intended.",
+	"Physics checks out.",
+	"That looked painful. Do it again.",
+	"Skill issue detected.",
+	"Refunding your momentum...",
+	"Did you forget up is down?",
+	"Friction is a privilege, not a right.",
+	"Error: Player object destroyed.",
+	"Maybe try jumping?",
+	"Newton is rolling in his grave.",
+	"Lag? No, that was you.",
+	"Have a participant ribbon.",
+	"Resetting simulation..."
 ]
 
 
