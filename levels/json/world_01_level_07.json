@@ -1,0 +1,260 @@
+{
+    "level_id": "world_01_level_07",
+    "title": "Physics Roulette",
+    "description": "Every zone is a surprise. Good luck.",
+    "player_spawn": [
+        100,
+        500
+    ],
+    "platforms": [
+        {
+            "position": [
+                0,
+                600
+            ],
+            "size": [
+                300,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                400,
+                600
+            ],
+            "size": [
+                250,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                400,
+                200
+            ],
+            "size": [
+                250,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                750,
+                600
+            ],
+            "size": [
+                250,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1100,
+                500
+            ],
+            "size": [
+                250,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1450,
+                600
+            ],
+            "size": [
+                250,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1800,
+                500
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                2100,
+                400
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                2400,
+                500
+            ],
+            "size": [
+                300,
+                64
+            ],
+            "type": "normal"
+        }
+    ],
+    "hazards": [
+        {
+            "position": [
+                350,
+                550
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                700,
+                550
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1050,
+                550
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1400,
+                550
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1750,
+                550
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                2050,
+                550
+            ],
+            "type": "spike"
+        }
+    ],
+    "physics_triggers": [
+        {
+            "position": [
+                350,
+                300
+            ],
+            "size": [
+                60,
+                400
+            ],
+            "state": "ReverseGravity",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                700,
+                300
+            ],
+            "size": [
+                60,
+                400
+            ],
+            "state": "Normal",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                1050,
+                300
+            ],
+            "size": [
+                60,
+                400
+            ],
+            "state": "LowGravity",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                1400,
+                300
+            ],
+            "size": [
+                60,
+                400
+            ],
+            "state": "ZeroFriction",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                1750,
+                300
+            ],
+            "size": [
+                60,
+                400
+            ],
+            "state": "BouncyPhysics",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                2350,
+                300
+            ],
+            "size": [
+                60,
+                400
+            ],
+            "state": "Normal",
+            "trigger_type": "enter",
+            "delay": 0.0
+        }
+    ],
+    "checkpoints": [
+        {
+            "position": [
+                750,
+                550
+            ]
+        },
+        {
+            "position": [
+                1450,
+                550
+            ]
+        },
+        {
+            "position": [
+                2100,
+                350
+            ]
+        }
+    ],
+    "exit": {
+        "position": [
+            2600,
+            400
+        ]
+    }
+}

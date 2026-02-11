@@ -42,25 +42,62 @@ func _process(delta: float) -> void:
 		level_timer += delta
 
 
+# ─── Constants ──────────────────────────────────────────────────────────────
+
+const LEVELS_PER_WORLD: int = 8
+const TOTAL_WORLDS: int = 3
+
+
 # ─── Level Loading ──────────────────────────────────────────────────────────
 
 ## Loads and transitions to a specific level.
+## Tries .tscn scene first, then falls back to JSON via LevelLoader.
 ## [param world] World number (1-based).
 ## [param level] Level number within that world (1-based).
 func load_level(world: int, level: int) -> void:
 	current_world = world
 	current_level = level
 
-	var level_path := "res://levels/world_%02d/level_%02d.tscn" % [world, level]
-	
-	if not ResourceLoader.exists(level_path):
-		push_error("[LevelManager] Level not found: %s" % level_path)
+	# Save as last played
+	SaveManager.set_setting("last_played", {"world": world, "level": level})
+
+	# Try .tscn scene first
+	var scene_path := "res://levels/world_%02d/level_%02d.tscn" % [world, level]
+	if ResourceLoader.exists(scene_path):
+		SceneTransition.fade_to_scene(scene_path, 0.5)
+		await SceneTransition.transition_finished
+		on_level_start()
 		return
 
-	SceneTransition.fade_to_scene(level_path, 0.5)
-	await SceneTransition.transition_finished
+	# Fall back to JSON
+	var json_path := "res://levels/json/world_%02d_level_%02d.json" % [world, level]
+	if FileAccess.file_exists(json_path):
+		var level_node := LevelLoader.load_level(json_path)
+		if level_node:
+			get_tree().current_scene.queue_free()
+			get_tree().root.add_child(level_node)
+			get_tree().current_scene = level_node
+			on_level_start()
+			return
 
-	on_level_start()
+	push_error("[LevelManager] Level not found: world %d, level %d" % [world, level])
+
+
+## Loads the next level in sequence, or returns to level select if at the end.
+func load_next_level() -> void:
+	var next_level := current_level + 1
+	var next_world := current_world
+	
+	if next_level > LEVELS_PER_WORLD:
+		next_level = 1
+		next_world += 1
+	
+	if next_world > TOTAL_WORLDS:
+		# All levels complete — return to level select
+		SceneTransition.fade_to_scene("res://scenes/ui/LevelSelectScreen.tscn", 0.5)
+		return
+	
+	load_level(next_world, next_level)
 
 
 ## Called after a new level scene finishes loading.

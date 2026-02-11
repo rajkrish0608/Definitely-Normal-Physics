@@ -1,0 +1,128 @@
+{
+    "level_id": "world_01_level_02",
+    "title": "What Goes Up...",
+    "description": "Wait, gravity goes WHERE?!",
+    "player_spawn": [
+        100,
+        500
+    ],
+    "platforms": [
+        {
+            "position": [
+                0,
+                600
+            ],
+            "size": [
+                500,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                600,
+                600
+            ],
+            "size": [
+                300,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                600,
+                200
+            ],
+            "size": [
+                300,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1000,
+                200
+            ],
+            "size": [
+                300,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1000,
+                600
+            ],
+            "size": [
+                300,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1400,
+                600
+            ],
+            "size": [
+                400,
+                64
+            ],
+            "type": "normal"
+        }
+    ],
+    "hazards": [
+        {
+            "position": [
+                900,
+                400
+            ],
+            "type": "spike"
+        }
+    ],
+    "physics_triggers": [
+        {
+            "position": [
+                550,
+                300
+            ],
+            "size": [
+                80,
+                400
+            ],
+            "state": "ReverseGravity",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                1350,
+                300
+            ],
+            "size": [
+                80,
+                400
+            ],
+            "state": "Normal",
+            "trigger_type": "enter",
+            "delay": 0.0
+        }
+    ],
+    "checkpoints": [
+        {
+            "position": [
+                700,
+                550
+            ]
+        }
+    ],
+    "exit": {
+        "position": [
+            1650,
+            500
+        ]
+    }
+}

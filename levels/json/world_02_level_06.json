@@ -1,0 +1,183 @@
+{
+    "level_id": "world_02_level_06",
+    "title": "Vertical Climb",
+    "description": "The only way is up. And also down. And up again.",
+    "player_spawn": [
+        400,
+        700
+    ],
+    "platforms": [
+        {
+            "position": [
+                300,
+                750
+            ],
+            "size": [
+                300,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                100,
+                650
+            ],
+            "size": [
+                150,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                500,
+                550
+            ],
+            "size": [
+                150,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                200,
+                450
+            ],
+            "size": [
+                150,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                500,
+                350
+            ],
+            "size": [
+                150,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                200,
+                250
+            ],
+            "size": [
+                150,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                500,
+                150
+            ],
+            "size": [
+                150,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                200,
+                50
+            ],
+            "size": [
+                300,
+                64
+            ],
+            "type": "normal"
+        }
+    ],
+    "hazards": [
+        {
+            "position": [
+                350,
+                500
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                350,
+                300
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                350,
+                100
+            ],
+            "type": "spike"
+        }
+    ],
+    "physics_triggers": [
+        {
+            "position": [
+                300,
+                600
+            ],
+            "size": [
+                200,
+                60
+            ],
+            "state": "LowGravity",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                300,
+                400
+            ],
+            "size": [
+                200,
+                60
+            ],
+            "state": "ReverseGravity",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                300,
+                200
+            ],
+            "size": [
+                200,
+                60
+            ],
+            "state": "Normal",
+            "trigger_type": "enter",
+            "delay": 0.0
+        }
+    ],
+    "checkpoints": [
+        {
+            "position": [
+                500,
+                500
+            ]
+        },
+        {
+            "position": [
+                200,
+                200
+            ]
+        }
+    ],
+    "exit": {
+        "position": [
+            350,
+            -50
+        ]
+    }
+}

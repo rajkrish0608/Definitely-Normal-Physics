@@ -1,0 +1,249 @@
+{
+    "level_id": "world_02_level_03",
+    "title": "Gravity Maze",
+    "description": "Up is down, down is up, left is... still left.",
+    "player_spawn": [
+        100,
+        500
+    ],
+    "platforms": [
+        {
+            "position": [
+                0,
+                600
+            ],
+            "size": [
+                250,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                0,
+                150
+            ],
+            "size": [
+                250,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                350,
+                600
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                350,
+                150
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                650,
+                600
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                650,
+                150
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                950,
+                600
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                950,
+                150
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1250,
+                600
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1250,
+                150
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1550,
+                600
+            ],
+            "size": [
+                300,
+                64
+            ],
+            "type": "normal"
+        }
+    ],
+    "hazards": [
+        {
+            "position": [
+                300,
+                380
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                600,
+                380
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                900,
+                380
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1200,
+                380
+            ],
+            "type": "spike"
+        }
+    ],
+    "physics_triggers": [
+        {
+            "position": [
+                300,
+                300
+            ],
+            "size": [
+                60,
+                400
+            ],
+            "state": "ReverseGravity",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                600,
+                300
+            ],
+            "size": [
+                60,
+                400
+            ],
+            "state": "Normal",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                900,
+                300
+            ],
+            "size": [
+                60,
+                400
+            ],
+            "state": "ReverseGravity",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                1200,
+                300
+            ],
+            "size": [
+                60,
+                400
+            ],
+            "state": "Normal",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                1500,
+                300
+            ],
+            "size": [
+                60,
+                400
+            ],
+            "state": "Normal",
+            "trigger_type": "enter",
+            "delay": 0.0
+        }
+    ],
+    "checkpoints": [
+        {
+            "position": [
+                650,
+                550
+            ]
+        },
+        {
+            "position": [
+                1250,
+                550
+            ]
+        }
+    ],
+    "exit": {
+        "position": [
+            1700,
+            500
+        ]
+    }
+}

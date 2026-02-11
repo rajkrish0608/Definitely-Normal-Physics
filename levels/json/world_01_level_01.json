@@ -1,0 +1,24 @@
+{
+	"level_id": "world_01_level_01",
+	"title": "First Steps",
+	"description": "Learn to move and jump. Nothing weird here... yet.",
+	"player_spawn": [100, 500],
+
+	"platforms": [
+		{"position": [0, 600], "size": [400, 64], "type": "normal"},
+		{"position": [500, 600], "size": [200, 64], "type": "normal"},
+		{"position": [800, 600], "size": [200, 64], "type": "normal"},
+		{"position": [1100, 550], "size": [200, 64], "type": "normal"},
+		{"position": [1400, 500], "size": [200, 64], "type": "normal"},
+		{"position": [1700, 500], "size": [300, 64], "type": "normal"}
+	],
+
+	"hazards": [],
+	"physics_triggers": [],
+
+	"checkpoints": [
+		{"position": [800, 550]}
+	],
+
+	"exit": {"position": [1850, 400]}
+}

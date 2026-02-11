@@ -1,0 +1,178 @@
+{
+    "level_id": "world_01_level_04",
+    "title": "Heavy Hitter",
+    "description": "Everything is heavier. Including your mistakes.",
+    "player_spawn": [
+        100,
+        400
+    ],
+    "platforms": [
+        {
+            "position": [
+                0,
+                500
+            ],
+            "size": [
+                400,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                450,
+                500
+            ],
+            "size": [
+                150,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                650,
+                500
+            ],
+            "size": [
+                150,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                850,
+                480
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1100,
+                460
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1350,
+                440
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1600,
+                420
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1850,
+                420
+            ],
+            "size": [
+                300,
+                64
+            ],
+            "type": "normal"
+        }
+    ],
+    "hazards": [
+        {
+            "position": [
+                420,
+                550
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                620,
+                550
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                820,
+                550
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1070,
+                550
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1320,
+                550
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1570,
+                550
+            ],
+            "type": "spike"
+        }
+    ],
+    "physics_triggers": [
+        {
+            "position": [
+                400,
+                300
+            ],
+            "size": [
+                80,
+                300
+            ],
+            "state": "HighGravity",
+            "trigger_type": "enter",
+            "delay": 0.0
+        }
+    ],
+    "checkpoints": [
+        {
+            "position": [
+                850,
+                430
+            ]
+        },
+        {
+            "position": [
+                1350,
+                390
+            ]
+        }
+    ],
+    "exit": {
+        "position": [
+            2000,
+            320
+        ]
+    }
+}

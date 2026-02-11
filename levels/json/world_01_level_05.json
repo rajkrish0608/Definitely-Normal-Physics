@@ -1,0 +1,211 @@
+{
+    "level_id": "world_01_level_05",
+    "title": "Slip 'n' Stick",
+    "description": "Ice, then mud. The floor can't make up its mind.",
+    "player_spawn": [
+        100,
+        500
+    ],
+    "platforms": [
+        {
+            "position": [
+                0,
+                600
+            ],
+            "size": [
+                400,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                500,
+                600
+            ],
+            "size": [
+                400,
+                64
+            ],
+            "type": "ice"
+        },
+        {
+            "position": [
+                1000,
+                600
+            ],
+            "size": [
+                100,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1200,
+                600
+            ],
+            "size": [
+                400,
+                64
+            ],
+            "type": "mud"
+        },
+        {
+            "position": [
+                1700,
+                600
+            ],
+            "size": [
+                100,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1900,
+                600
+            ],
+            "size": [
+                300,
+                64
+            ],
+            "type": "ice"
+        },
+        {
+            "position": [
+                2300,
+                600
+            ],
+            "size": [
+                300,
+                64
+            ],
+            "type": "normal"
+        }
+    ],
+    "hazards": [
+        {
+            "position": [
+                950,
+                550
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1650,
+                550
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                2250,
+                550
+            ],
+            "type": "spike"
+        }
+    ],
+    "physics_triggers": [
+        {
+            "position": [
+                450,
+                300
+            ],
+            "size": [
+                80,
+                400
+            ],
+            "state": "ZeroFriction",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                950,
+                300
+            ],
+            "size": [
+                80,
+                400
+            ],
+            "state": "Normal",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                1150,
+                300
+            ],
+            "size": [
+                80,
+                400
+            ],
+            "state": "SuperFriction",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                1650,
+                300
+            ],
+            "size": [
+                80,
+                400
+            ],
+            "state": "Normal",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                1850,
+                300
+            ],
+            "size": [
+                80,
+                400
+            ],
+            "state": "ZeroFriction",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                2250,
+                300
+            ],
+            "size": [
+                80,
+                400
+            ],
+            "state": "Normal",
+            "trigger_type": "enter",
+            "delay": 0.0
+        }
+    ],
+    "checkpoints": [
+        {
+            "position": [
+                1000,
+                550
+            ]
+        },
+        {
+            "position": [
+                1700,
+                550
+            ]
+        }
+    ],
+    "exit": {
+        "position": [
+            2500,
+            500
+        ]
+    }
+}

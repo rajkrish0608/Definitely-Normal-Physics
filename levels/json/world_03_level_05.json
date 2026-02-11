@@ -1,0 +1,221 @@
+{
+    "level_id": "world_03_level_05",
+    "title": "Speed Run",
+    "description": "Can you beat it under 30 seconds?",
+    "player_spawn": [
+        100,
+        500
+    ],
+    "platforms": [
+        {
+            "position": [
+                0,
+                600
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                300,
+                550
+            ],
+            "size": [
+                150,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                550,
+                500
+            ],
+            "size": [
+                150,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                800,
+                450
+            ],
+            "size": [
+                150,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1050,
+                400
+            ],
+            "size": [
+                150,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1300,
+                350
+            ],
+            "size": [
+                150,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1550,
+                300
+            ],
+            "size": [
+                150,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1800,
+                250
+            ],
+            "size": [
+                150,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                2050,
+                200
+            ],
+            "size": [
+                150,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                2300,
+                300
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        }
+    ],
+    "hazards": [
+        {
+            "position": [
+                250,
+                600
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                500,
+                550
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                750,
+                500
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1000,
+                450
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1250,
+                400
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1500,
+                350
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1750,
+                300
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                2000,
+                250
+            ],
+            "type": "spike"
+        }
+    ],
+    "physics_triggers": [
+        {
+            "position": [
+                250,
+                300
+            ],
+            "size": [
+                60,
+                400
+            ],
+            "state": "LowGravity",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                2250,
+                300
+            ],
+            "size": [
+                60,
+                400
+            ],
+            "state": "Normal",
+            "trigger_type": "enter",
+            "delay": 0.0
+        }
+    ],
+    "checkpoints": [
+        {
+            "position": [
+                1050,
+                350
+            ]
+        }
+    ],
+    "exit": {
+        "position": [
+            2400,
+            200
+        ]
+    }
+}

@@ -1,0 +1,555 @@
+{
+    "level_id": "world_03_level_08",
+    "title": "Definitely NOT Normal",
+    "description": "The final boss. Everything, everywhere, all at once.",
+    "player_spawn": [
+        100,
+        500
+    ],
+    "platforms": [
+        {
+            "position": [
+                0,
+                600
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                300,
+                550
+            ],
+            "size": [
+                80,
+                24
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                300,
+                200
+            ],
+            "size": [
+                80,
+                24
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                480,
+                400
+            ],
+            "size": [
+                80,
+                24
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                660,
+                550
+            ],
+            "size": [
+                80,
+                24
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                660,
+                200
+            ],
+            "size": [
+                80,
+                24
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                840,
+                350
+            ],
+            "size": [
+                80,
+                24
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1020,
+                500
+            ],
+            "size": [
+                80,
+                24
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1200,
+                300
+            ],
+            "size": [
+                80,
+                24
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1380,
+                450
+            ],
+            "size": [
+                80,
+                24
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1560,
+                250
+            ],
+            "size": [
+                80,
+                24
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1740,
+                400
+            ],
+            "size": [
+                80,
+                24
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1920,
+                550
+            ],
+            "size": [
+                80,
+                24
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1920,
+                200
+            ],
+            "size": [
+                80,
+                24
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                2100,
+                350
+            ],
+            "size": [
+                80,
+                24
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                2280,
+                500
+            ],
+            "size": [
+                80,
+                24
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                2460,
+                300
+            ],
+            "size": [
+                80,
+                24
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                2640,
+                450
+            ],
+            "size": [
+                80,
+                24
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                2820,
+                300
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        }
+    ],
+    "hazards": [
+        {
+            "position": [
+                250,
+                380
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                430,
+                550
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                610,
+                380
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                790,
+                550
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                970,
+                550
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1150,
+                550
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1330,
+                550
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1510,
+                550
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1690,
+                550
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1870,
+                380
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                2050,
+                550
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                2230,
+                550
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                2410,
+                550
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                2590,
+                550
+            ],
+            "type": "spike"
+        }
+    ],
+    "physics_triggers": [
+        {
+            "position": [
+                250,
+                300
+            ],
+            "size": [
+                40,
+                400
+            ],
+            "state": "ReverseGravity",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                430,
+                300
+            ],
+            "size": [
+                40,
+                400
+            ],
+            "state": "LowGravity",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                610,
+                300
+            ],
+            "size": [
+                40,
+                400
+            ],
+            "state": "ReverseGravity",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                790,
+                300
+            ],
+            "size": [
+                40,
+                400
+            ],
+            "state": "HighGravity",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                970,
+                300
+            ],
+            "size": [
+                40,
+                400
+            ],
+            "state": "ZeroFriction",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                1150,
+                300
+            ],
+            "size": [
+                40,
+                400
+            ],
+            "state": "BouncyPhysics",
+            "trigger_type": "timer",
+            "delay": 0.5
+        },
+        {
+            "position": [
+                1330,
+                300
+            ],
+            "size": [
+                40,
+                400
+            ],
+            "state": "SuperFriction",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                1510,
+                300
+            ],
+            "size": [
+                40,
+                400
+            ],
+            "state": "LowGravity",
+            "trigger_type": "timer",
+            "delay": 1.0
+        },
+        {
+            "position": [
+                1690,
+                300
+            ],
+            "size": [
+                40,
+                400
+            ],
+            "state": "Normal",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                1870,
+                300
+            ],
+            "size": [
+                40,
+                400
+            ],
+            "state": "ReverseGravity",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                2050,
+                300
+            ],
+            "size": [
+                40,
+                400
+            ],
+            "state": "ZeroFriction",
+            "trigger_type": "timer",
+            "delay": 0.3
+        },
+        {
+            "position": [
+                2230,
+                300
+            ],
+            "size": [
+                40,
+                400
+            ],
+            "state": "HighGravity",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                2410,
+                300
+            ],
+            "size": [
+                40,
+                400
+            ],
+            "state": "BouncyPhysics",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                2590,
+                300
+            ],
+            "size": [
+                40,
+                400
+            ],
+            "state": "LowGravity",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                2770,
+                300
+            ],
+            "size": [
+                40,
+                400
+            ],
+            "state": "Normal",
+            "trigger_type": "enter",
+            "delay": 0.0
+        }
+    ],
+    "checkpoints": [
+        {
+            "position": [
+                480,
+                350
+            ]
+        },
+        {
+            "position": [
+                840,
+                300
+            ]
+        },
+        {
+            "position": [
+                1380,
+                400
+            ]
+        },
+        {
+            "position": [
+                1920,
+                500
+            ]
+        },
+        {
+            "position": [
+                2460,
+                250
+            ]
+        }
+    ],
+    "exit": {
+        "position": [
+            2920,
+            200
+        ]
+    }
+}

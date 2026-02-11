@@ -1,0 +1,149 @@
+{
+    "game_title": "Definitely Normal Physics",
+    "total_worlds": 3,
+    "levels_per_world": 8,
+    "total_levels": 24,
+    "worlds": [
+        {
+            "world_id": 1,
+            "name": "Tutorial Town",
+            "description": "Learn the rules. Before they break.",
+            "levels": [
+                {
+                    "level": 1,
+                    "file": "world_01_level_01.json",
+                    "title": "First Steps"
+                },
+                {
+                    "level": 2,
+                    "file": "world_01_level_02.json",
+                    "title": "What Goes Up..."
+                },
+                {
+                    "level": 3,
+                    "file": "world_01_level_03.json",
+                    "title": "Featherweight"
+                },
+                {
+                    "level": 4,
+                    "file": "world_01_level_04.json",
+                    "title": "Heavy Hitter"
+                },
+                {
+                    "level": 5,
+                    "file": "world_01_level_05.json",
+                    "title": "Slip 'n' Stick"
+                },
+                {
+                    "level": 6,
+                    "file": "world_01_level_06.json",
+                    "title": "Bouncy Castle"
+                },
+                {
+                    "level": 7,
+                    "file": "world_01_level_07.json",
+                    "title": "Physics Roulette"
+                },
+                {
+                    "level": 8,
+                    "file": "world_01_level_08.json",
+                    "title": "Final Exam"
+                }
+            ]
+        },
+        {
+            "world_id": 2,
+            "name": "Advanced Academy",
+            "description": "You thought you were ready. You weren't.",
+            "levels": [
+                {
+                    "level": 1,
+                    "file": "world_02_level_01.json",
+                    "title": "Double Trouble"
+                },
+                {
+                    "level": 2,
+                    "file": "world_02_level_02.json",
+                    "title": "Ice Bounce"
+                },
+                {
+                    "level": 3,
+                    "file": "world_02_level_03.json",
+                    "title": "Gravity Maze"
+                },
+                {
+                    "level": 4,
+                    "file": "world_02_level_04.json",
+                    "title": "Delayed Reaction"
+                },
+                {
+                    "level": 5,
+                    "file": "world_02_level_05.json",
+                    "title": "The Gauntlet"
+                },
+                {
+                    "level": 6,
+                    "file": "world_02_level_06.json",
+                    "title": "Vertical Climb"
+                },
+                {
+                    "level": 7,
+                    "file": "world_02_level_07.json",
+                    "title": "Pinball Wizard"
+                },
+                {
+                    "level": 8,
+                    "file": "world_02_level_08.json",
+                    "title": "Chaos Theory"
+                }
+            ]
+        },
+        {
+            "world_id": 3,
+            "name": "Expert Elysium",
+            "description": "For masochists and speedrunners only.",
+            "levels": [
+                {
+                    "level": 1,
+                    "file": "world_03_level_01.json",
+                    "title": "Upside Down Town"
+                },
+                {
+                    "level": 2,
+                    "file": "world_03_level_02.json",
+                    "title": "Sticky Situation"
+                },
+                {
+                    "level": 3,
+                    "file": "world_03_level_03.json",
+                    "title": "Zero-G Playground"
+                },
+                {
+                    "level": 4,
+                    "file": "world_03_level_04.json",
+                    "title": "One-Way Trip"
+                },
+                {
+                    "level": 5,
+                    "file": "world_03_level_05.json",
+                    "title": "Speed Run"
+                },
+                {
+                    "level": 6,
+                    "file": "world_03_level_06.json",
+                    "title": "Mirror World"
+                },
+                {
+                    "level": 7,
+                    "file": "world_03_level_07.json",
+                    "title": "Combo Breaker"
+                },
+                {
+                    "level": 8,
+                    "file": "world_03_level_08.json",
+                    "title": "Definitely NOT Normal"
+                }
+            ]
+        }
+    ]
+}

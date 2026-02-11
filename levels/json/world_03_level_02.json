@@ -1,0 +1,266 @@
+{
+    "level_id": "world_03_level_02",
+    "title": "Sticky Situation",
+    "description": "Super friction + high gravity = very bad day.",
+    "player_spawn": [
+        100,
+        400
+    ],
+    "platforms": [
+        {
+            "position": [
+                0,
+                500
+            ],
+            "size": [
+                300,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                350,
+                480
+            ],
+            "size": [
+                150,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                550,
+                460
+            ],
+            "size": [
+                150,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                750,
+                440
+            ],
+            "size": [
+                150,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                950,
+                420
+            ],
+            "size": [
+                150,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1150,
+                400
+            ],
+            "size": [
+                150,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1350,
+                380
+            ],
+            "size": [
+                150,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1550,
+                360
+            ],
+            "size": [
+                150,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1750,
+                340
+            ],
+            "size": [
+                150,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1950,
+                320
+            ],
+            "size": [
+                300,
+                64
+            ],
+            "type": "normal"
+        }
+    ],
+    "hazards": [
+        {
+            "position": [
+                320,
+                530
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                520,
+                530
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                720,
+                530
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                920,
+                530
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1120,
+                530
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1320,
+                530
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1520,
+                530
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1720,
+                530
+            ],
+            "type": "spike"
+        }
+    ],
+    "physics_triggers": [
+        {
+            "position": [
+                300,
+                300
+            ],
+            "size": [
+                60,
+                300
+            ],
+            "state": "SuperFriction",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                700,
+                300
+            ],
+            "size": [
+                60,
+                300
+            ],
+            "state": "HighGravity",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                1100,
+                300
+            ],
+            "size": [
+                60,
+                300
+            ],
+            "state": "SuperFriction",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                1500,
+                300
+            ],
+            "size": [
+                60,
+                300
+            ],
+            "state": "HighGravity",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                1900,
+                300
+            ],
+            "size": [
+                60,
+                300
+            ],
+            "state": "Normal",
+            "trigger_type": "enter",
+            "delay": 0.0
+        }
+    ],
+    "checkpoints": [
+        {
+            "position": [
+                750,
+                390
+            ]
+        },
+        {
+            "position": [
+                1350,
+                330
+            ]
+        }
+    ],
+    "exit": {
+        "position": [
+            2100,
+            220
+        ]
+    }
+}

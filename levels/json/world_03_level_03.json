@@ -1,0 +1,246 @@
+{
+    "level_id": "world_03_level_03",
+    "title": "Zero-G Playground",
+    "description": "Float forever. Die often.",
+    "player_spawn": [
+        100,
+        400
+    ],
+    "platforms": [
+        {
+            "position": [
+                0,
+                500
+            ],
+            "size": [
+                250,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                400,
+                400
+            ],
+            "size": [
+                80,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                600,
+                300
+            ],
+            "size": [
+                80,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                800,
+                200
+            ],
+            "size": [
+                80,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1000,
+                350
+            ],
+            "size": [
+                80,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1200,
+                450
+            ],
+            "size": [
+                80,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1400,
+                250
+            ],
+            "size": [
+                80,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1600,
+                150
+            ],
+            "size": [
+                80,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1800,
+                300
+            ],
+            "size": [
+                80,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                2000,
+                400
+            ],
+            "size": [
+                250,
+                64
+            ],
+            "type": "normal"
+        }
+    ],
+    "hazards": [
+        {
+            "position": [
+                500,
+                350
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                700,
+                250
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                900,
+                300
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1100,
+                400
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1300,
+                350
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1500,
+                200
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1700,
+                250
+            ],
+            "type": "spike"
+        }
+    ],
+    "physics_triggers": [
+        {
+            "position": [
+                300,
+                300
+            ],
+            "size": [
+                60,
+                300
+            ],
+            "state": "LowGravity",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                900,
+                300
+            ],
+            "size": [
+                60,
+                300
+            ],
+            "state": "BouncyPhysics",
+            "trigger_type": "timer",
+            "delay": 3.0
+        },
+        {
+            "position": [
+                1400,
+                300
+            ],
+            "size": [
+                60,
+                300
+            ],
+            "state": "LowGravity",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                1950,
+                300
+            ],
+            "size": [
+                60,
+                300
+            ],
+            "state": "Normal",
+            "trigger_type": "enter",
+            "delay": 0.0
+        }
+    ],
+    "checkpoints": [
+        {
+            "position": [
+                800,
+                150
+            ]
+        },
+        {
+            "position": [
+                1400,
+                200
+            ]
+        }
+    ],
+    "exit": {
+        "position": [
+            2150,
+            300
+        ]
+    }
+}

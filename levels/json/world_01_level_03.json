@@ -1,0 +1,170 @@
+{
+    "level_id": "world_01_level_03",
+    "title": "Featherweight",
+    "description": "Float like a butterfly, land like... eventually.",
+    "player_spawn": [
+        100,
+        500
+    ],
+    "platforms": [
+        {
+            "position": [
+                0,
+                600
+            ],
+            "size": [
+                300,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                500,
+                500
+            ],
+            "size": [
+                128,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                800,
+                400
+            ],
+            "size": [
+                128,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1100,
+                300
+            ],
+            "size": [
+                128,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1400,
+                200
+            ],
+            "size": [
+                128,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1700,
+                300
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                2000,
+                400
+            ],
+            "size": [
+                128,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                2300,
+                500
+            ],
+            "size": [
+                300,
+                64
+            ],
+            "type": "normal"
+        }
+    ],
+    "hazards": [
+        {
+            "position": [
+                700,
+                550
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1000,
+                550
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1900,
+                550
+            ],
+            "type": "spike"
+        }
+    ],
+    "physics_triggers": [
+        {
+            "position": [
+                350,
+                300
+            ],
+            "size": [
+                80,
+                400
+            ],
+            "state": "LowGravity",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                2250,
+                300
+            ],
+            "size": [
+                80,
+                400
+            ],
+            "state": "Normal",
+            "trigger_type": "enter",
+            "delay": 0.0
+        }
+    ],
+    "checkpoints": [
+        {
+            "position": [
+                1100,
+                250
+            ]
+        },
+        {
+            "position": [
+                1700,
+                250
+            ]
+        }
+    ],
+    "exit": {
+        "position": [
+            2450,
+            400
+        ]
+    }
+}

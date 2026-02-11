@@ -1,0 +1,234 @@
+{
+    "level_id": "world_03_level_04",
+    "title": "One-Way Trip",
+    "description": "Each trigger only fires once. Choose wisely.",
+    "player_spawn": [
+        100,
+        500
+    ],
+    "platforms": [
+        {
+            "position": [
+                0,
+                600
+            ],
+            "size": [
+                300,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                400,
+                550
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                700,
+                500
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                700,
+                200
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1000,
+                400
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1300,
+                300
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1600,
+                500
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1900,
+                400
+            ],
+            "size": [
+                300,
+                64
+            ],
+            "type": "normal"
+        }
+    ],
+    "hazards": [
+        {
+            "position": [
+                350,
+                580
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                650,
+                550
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                950,
+                550
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1550,
+                550
+            ],
+            "type": "spike"
+        }
+    ],
+    "physics_triggers": [
+        {
+            "position": [
+                350,
+                300
+            ],
+            "size": [
+                60,
+                400
+            ],
+            "state": "ZeroFriction",
+            "trigger_type": "enter",
+            "delay": 0.0,
+            "one_time": true
+        },
+        {
+            "position": [
+                650,
+                300
+            ],
+            "size": [
+                60,
+                400
+            ],
+            "state": "ReverseGravity",
+            "trigger_type": "enter",
+            "delay": 0.0,
+            "one_time": true
+        },
+        {
+            "position": [
+                950,
+                300
+            ],
+            "size": [
+                60,
+                400
+            ],
+            "state": "HighGravity",
+            "trigger_type": "enter",
+            "delay": 0.0,
+            "one_time": true
+        },
+        {
+            "position": [
+                1250,
+                300
+            ],
+            "size": [
+                60,
+                400
+            ],
+            "state": "LowGravity",
+            "trigger_type": "enter",
+            "delay": 0.0,
+            "one_time": true
+        },
+        {
+            "position": [
+                1550,
+                300
+            ],
+            "size": [
+                60,
+                400
+            ],
+            "state": "BouncyPhysics",
+            "trigger_type": "enter",
+            "delay": 0.0,
+            "one_time": true
+        },
+        {
+            "position": [
+                1850,
+                300
+            ],
+            "size": [
+                60,
+                400
+            ],
+            "state": "Normal",
+            "trigger_type": "enter",
+            "delay": 0.0
+        }
+    ],
+    "checkpoints": [
+        {
+            "position": [
+                700,
+                450
+            ]
+        },
+        {
+            "position": [
+                1300,
+                250
+            ]
+        }
+    ],
+    "exit": {
+        "position": [
+            2050,
+            300
+        ]
+    }
+}

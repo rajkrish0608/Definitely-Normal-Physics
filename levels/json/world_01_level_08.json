@@ -1,0 +1,385 @@
+{
+    "level_id": "world_01_level_08",
+    "title": "Final Exam",
+    "description": "Everything you've learned. All at once. Rapidly.",
+    "player_spawn": [
+        100,
+        500
+    ],
+    "platforms": [
+        {
+            "position": [
+                0,
+                600
+            ],
+            "size": [
+                250,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                350,
+                550
+            ],
+            "size": [
+                150,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                350,
+                200
+            ],
+            "size": [
+                150,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                600,
+                200
+            ],
+            "size": [
+                150,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                600,
+                550
+            ],
+            "size": [
+                150,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                850,
+                500
+            ],
+            "size": [
+                150,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1050,
+                400
+            ],
+            "size": [
+                128,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1250,
+                300
+            ],
+            "size": [
+                128,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1450,
+                400
+            ],
+            "size": [
+                128,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1650,
+                500
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1950,
+                500
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                2250,
+                500
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                2550,
+                400
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                2550,
+                200
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                2850,
+                300
+            ],
+            "size": [
+                300,
+                64
+            ],
+            "type": "normal"
+        }
+    ],
+    "hazards": [
+        {
+            "position": [
+                300,
+                550
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                550,
+                550
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                800,
+                550
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1200,
+                550
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1600,
+                550
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1900,
+                550
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                2200,
+                550
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                2500,
+                550
+            ],
+            "type": "spike"
+        }
+    ],
+    "physics_triggers": [
+        {
+            "position": [
+                300,
+                300
+            ],
+            "size": [
+                60,
+                400
+            ],
+            "state": "ReverseGravity",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                550,
+                300
+            ],
+            "size": [
+                60,
+                400
+            ],
+            "state": "Normal",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                800,
+                300
+            ],
+            "size": [
+                60,
+                400
+            ],
+            "state": "HighGravity",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                1000,
+                300
+            ],
+            "size": [
+                60,
+                400
+            ],
+            "state": "LowGravity",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                1600,
+                300
+            ],
+            "size": [
+                60,
+                400
+            ],
+            "state": "ZeroFriction",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                1900,
+                300
+            ],
+            "size": [
+                60,
+                400
+            ],
+            "state": "BouncyPhysics",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                2200,
+                300
+            ],
+            "size": [
+                60,
+                400
+            ],
+            "state": "SuperFriction",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                2500,
+                300
+            ],
+            "size": [
+                60,
+                400
+            ],
+            "state": "ReverseGravity",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                2800,
+                300
+            ],
+            "size": [
+                60,
+                400
+            ],
+            "state": "Normal",
+            "trigger_type": "enter",
+            "delay": 0.0
+        }
+    ],
+    "checkpoints": [
+        {
+            "position": [
+                600,
+                500
+            ]
+        },
+        {
+            "position": [
+                1250,
+                250
+            ]
+        },
+        {
+            "position": [
+                1950,
+                450
+            ]
+        },
+        {
+            "position": [
+                2550,
+                350
+            ]
+        }
+    ],
+    "exit": {
+        "position": [
+            3000,
+            200
+        ]
+    }
+}

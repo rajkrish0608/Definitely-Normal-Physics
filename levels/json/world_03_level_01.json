@@ -1,0 +1,316 @@
+{
+    "level_id": "world_03_level_01",
+    "title": "Upside Down Town",
+    "description": "Welcome to a world where gravity is optional.",
+    "player_spawn": [
+        100,
+        500
+    ],
+    "platforms": [
+        {
+            "position": [
+                0,
+                600
+            ],
+            "size": [
+                250,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                0,
+                150
+            ],
+            "size": [
+                250,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                350,
+                500
+            ],
+            "size": [
+                100,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                550,
+                250
+            ],
+            "size": [
+                100,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                750,
+                500
+            ],
+            "size": [
+                100,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                950,
+                250
+            ],
+            "size": [
+                100,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1150,
+                500
+            ],
+            "size": [
+                100,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1350,
+                250
+            ],
+            "size": [
+                100,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1550,
+                500
+            ],
+            "size": [
+                100,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1750,
+                250
+            ],
+            "size": [
+                100,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1950,
+                400
+            ],
+            "size": [
+                250,
+                64
+            ],
+            "type": "normal"
+        }
+    ],
+    "hazards": [
+        {
+            "position": [
+                300,
+                380
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                500,
+                380
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                700,
+                380
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                900,
+                380
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1100,
+                380
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1300,
+                380
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1500,
+                380
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1700,
+                380
+            ],
+            "type": "spike"
+        }
+    ],
+    "physics_triggers": [
+        {
+            "position": [
+                300,
+                300
+            ],
+            "size": [
+                50,
+                400
+            ],
+            "state": "ReverseGravity",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                500,
+                300
+            ],
+            "size": [
+                50,
+                400
+            ],
+            "state": "Normal",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                700,
+                300
+            ],
+            "size": [
+                50,
+                400
+            ],
+            "state": "ReverseGravity",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                900,
+                300
+            ],
+            "size": [
+                50,
+                400
+            ],
+            "state": "Normal",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                1100,
+                300
+            ],
+            "size": [
+                50,
+                400
+            ],
+            "state": "ReverseGravity",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                1300,
+                300
+            ],
+            "size": [
+                50,
+                400
+            ],
+            "state": "Normal",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                1500,
+                300
+            ],
+            "size": [
+                50,
+                400
+            ],
+            "state": "ReverseGravity",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                1700,
+                300
+            ],
+            "size": [
+                50,
+                400
+            ],
+            "state": "Normal",
+            "trigger_type": "enter",
+            "delay": 0.0
+        }
+    ],
+    "checkpoints": [
+        {
+            "position": [
+                750,
+                450
+            ]
+        },
+        {
+            "position": [
+                1550,
+                450
+            ]
+        }
+    ],
+    "exit": {
+        "position": [
+            2100,
+            300
+        ]
+    }
+}

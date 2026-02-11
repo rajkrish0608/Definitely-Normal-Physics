@@ -1,0 +1,465 @@
+{
+    "level_id": "world_02_level_08",
+    "title": "Chaos Theory",
+    "description": "World 2 Boss. Nothing is predictable. Nothing is safe.",
+    "player_spawn": [
+        100,
+        500
+    ],
+    "platforms": [
+        {
+            "position": [
+                0,
+                600
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                300,
+                550
+            ],
+            "size": [
+                100,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                300,
+                200
+            ],
+            "size": [
+                100,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                500,
+                350
+            ],
+            "size": [
+                100,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                700,
+                550
+            ],
+            "size": [
+                100,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                700,
+                200
+            ],
+            "size": [
+                100,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                900,
+                450
+            ],
+            "size": [
+                100,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1100,
+                300
+            ],
+            "size": [
+                100,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1300,
+                550
+            ],
+            "size": [
+                150,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1550,
+                450
+            ],
+            "size": [
+                100,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1750,
+                350
+            ],
+            "size": [
+                100,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1950,
+                250
+            ],
+            "size": [
+                100,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                2150,
+                550
+            ],
+            "size": [
+                150,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                2400,
+                550
+            ],
+            "size": [
+                150,
+                32
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                2650,
+                400
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        }
+    ],
+    "hazards": [
+        {
+            "position": [
+                250,
+                580
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                450,
+                580
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                650,
+                580
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                850,
+                580
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1050,
+                580
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1250,
+                580
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1500,
+                580
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1700,
+                580
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1900,
+                580
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                2100,
+                580
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                2350,
+                580
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                250,
+                170
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                650,
+                170
+            ],
+            "type": "spike"
+        }
+    ],
+    "physics_triggers": [
+        {
+            "position": [
+                250,
+                300
+            ],
+            "size": [
+                50,
+                400
+            ],
+            "state": "ReverseGravity",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                450,
+                300
+            ],
+            "size": [
+                50,
+                400
+            ],
+            "state": "LowGravity",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                650,
+                300
+            ],
+            "size": [
+                50,
+                400
+            ],
+            "state": "ReverseGravity",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                850,
+                300
+            ],
+            "size": [
+                50,
+                400
+            ],
+            "state": "HighGravity",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                1050,
+                300
+            ],
+            "size": [
+                50,
+                400
+            ],
+            "state": "ZeroFriction",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                1250,
+                300
+            ],
+            "size": [
+                50,
+                400
+            ],
+            "state": "Normal",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                1500,
+                300
+            ],
+            "size": [
+                50,
+                400
+            ],
+            "state": "BouncyPhysics",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                1700,
+                300
+            ],
+            "size": [
+                50,
+                400
+            ],
+            "state": "SuperFriction",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                1900,
+                300
+            ],
+            "size": [
+                50,
+                400
+            ],
+            "state": "LowGravity",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                2100,
+                300
+            ],
+            "size": [
+                50,
+                400
+            ],
+            "state": "ZeroFriction",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                2350,
+                300
+            ],
+            "size": [
+                50,
+                400
+            ],
+            "state": "HighGravity",
+            "trigger_type": "enter",
+            "delay": 0.0
+        },
+        {
+            "position": [
+                2600,
+                300
+            ],
+            "size": [
+                50,
+                400
+            ],
+            "state": "Normal",
+            "trigger_type": "enter",
+            "delay": 0.0
+        }
+    ],
+    "checkpoints": [
+        {
+            "position": [
+                500,
+                300
+            ]
+        },
+        {
+            "position": [
+                900,
+                400
+            ]
+        },
+        {
+            "position": [
+                1300,
+                500
+            ]
+        },
+        {
+            "position": [
+                1750,
+                300
+            ]
+        },
+        {
+            "position": [
+                2150,
+                500
+            ]
+        }
+    ],
+    "exit": {
+        "position": [
+            2750,
+            300
+        ]
+    }
+}

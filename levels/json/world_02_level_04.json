@@ -1,0 +1,212 @@
+{
+    "level_id": "world_02_level_04",
+    "title": "Delayed Reaction",
+    "description": "The physics change... but not immediately.",
+    "player_spawn": [
+        100,
+        500
+    ],
+    "platforms": [
+        {
+            "position": [
+                0,
+                600
+            ],
+            "size": [
+                400,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                500,
+                550
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                800,
+                500
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1100,
+                450
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1400,
+                400
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                1700,
+                350
+            ],
+            "size": [
+                200,
+                64
+            ],
+            "type": "normal"
+        },
+        {
+            "position": [
+                2000,
+                400
+            ],
+            "size": [
+                300,
+                64
+            ],
+            "type": "normal"
+        }
+    ],
+    "hazards": [
+        {
+            "position": [
+                450,
+                600
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                750,
+                550
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1050,
+                500
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1350,
+                450
+            ],
+            "type": "spike"
+        },
+        {
+            "position": [
+                1650,
+                400
+            ],
+            "type": "spike"
+        }
+    ],
+    "physics_triggers": [
+        {
+            "position": [
+                450,
+                300
+            ],
+            "size": [
+                60,
+                400
+            ],
+            "state": "LowGravity",
+            "trigger_type": "timer",
+            "delay": 1.5
+        },
+        {
+            "position": [
+                750,
+                300
+            ],
+            "size": [
+                60,
+                400
+            ],
+            "state": "HighGravity",
+            "trigger_type": "timer",
+            "delay": 1.0
+        },
+        {
+            "position": [
+                1050,
+                300
+            ],
+            "size": [
+                60,
+                400
+            ],
+            "state": "ZeroFriction",
+            "trigger_type": "timer",
+            "delay": 2.0
+        },
+        {
+            "position": [
+                1350,
+                300
+            ],
+            "size": [
+                60,
+                400
+            ],
+            "state": "BouncyPhysics",
+            "trigger_type": "timer",
+            "delay": 0.5
+        },
+        {
+            "position": [
+                1950,
+                300
+            ],
+            "size": [
+                60,
+                400
+            ],
+            "state": "Normal",
+            "trigger_type": "enter",
+            "delay": 0.0
+        }
+    ],
+    "checkpoints": [
+        {
+            "position": [
+                800,
+                450
+            ]
+        },
+        {
+            "position": [
+                1400,
+                350
+            ]
+        }
+    ],
+    "exit": {
+        "position": [
+            2150,
+            300
+        ]
+    }
+}
