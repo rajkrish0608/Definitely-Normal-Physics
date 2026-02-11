@@ -19,6 +19,11 @@ func _ready() -> void:
 	hide()
 	EventBus.level_complete.connect(_on_level_complete)
 
+	# Set themed copy
+	$CenterContainer/VBoxContainer/NextButton.text = "Next Experiment"
+	$CenterContainer/VBoxContainer/RetryButton.text = "Retry Simulation"
+	$CenterContainer/VBoxContainer/LevelSelectButton.text = "Experiment List"
+
 	$CenterContainer/VBoxContainer/NextButton.pressed.connect(_on_next_pressed)
 	$CenterContainer/VBoxContainer/RetryButton.pressed.connect(_on_retry_pressed)
 	$CenterContainer/VBoxContainer/LevelSelectButton.pressed.connect(_on_level_select_pressed)
@@ -30,6 +35,16 @@ func _on_level_complete(world: int, level: int) -> void:
 
 	var stars := LevelManager.calculate_stars(LevelManager.death_count)
 	_display_stars(stars)
+
+	# Update title based on performance
+	var title_label := $CenterContainer/VBoxContainer/TitleLabel as Label
+	if title_label:
+		if stars == 3:
+			title_label.text = "Simulation Perfect!"
+		elif stars == 2:
+			title_label.text = "Simulation Successful"
+		else:
+			title_label.text = "Simulation... Complete."
 
 	var stats_label := $CenterContainer/VBoxContainer/StatsLabel as Label
 	if stats_label:
@@ -58,8 +73,7 @@ func _display_stars(count: int) -> void:
 func _on_next_pressed() -> void:
 	get_tree().paused = false
 	AudioManager.play_sfx("button_click")
-	# Load next level (same world, +1 level)
-	LevelManager.load_level(LevelManager.current_world, LevelManager.current_level + 1)
+	LevelManager.load_next_level()
 	hide()
 
 

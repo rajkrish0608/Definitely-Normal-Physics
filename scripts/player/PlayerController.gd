@@ -39,6 +39,12 @@ var _is_dead: bool = false
 var _coyote_timer: float = 0.0
 const COYOTE_TIME: float = 0.1
 
+## Track whether we were on the floor last frame (for landing detection).
+var _was_on_floor: bool = false
+
+## Track last velocity for landing impact calculation.
+var _last_velocity_y: float = 0.0
+
 
 # ─── Lifecycle ───────────────────────────────────────────────────────────────
 
@@ -47,6 +53,9 @@ func _ready() -> void:
 	var cam := get_node_or_null("Camera2D")
 	if cam:
 		ScreenEffects.register_camera(cam)
+
+	# Listen for physics changes to trigger visual feedback
+	EventBus.physics_changed.connect(_on_physics_changed)
 
 
 func _physics_process(delta: float) -> void:
@@ -63,12 +72,23 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += gravity * delta
 		_coyote_timer = max(0, _coyote_timer - delta)
+		_last_velocity_y = velocity.y
 	else:
 		_coyote_timer = GameConstants.COYOTE_TIME
 		# Apply bounce if landing
 		if velocity.dot(gravity.normalized()) > 0 and PhysicsManager.current_state.bounce > 0:
 			var bounce_factor := PhysicsManager.current_state.bounce
 			velocity = velocity.reflect(Vector2.UP) * bounce_factor
+
+		# ── Landing detection: trigger effects ──
+		if not _was_on_floor:
+			var impact_speed := absf(_last_velocity_y)
+			if impact_speed > 200:
+				# Screen shake proportional to impact
+				var shake_intensity := clampf(impact_speed / 100.0, 2.0, 12.0)
+				ScreenEffects.shake_camera(shake_intensity, 0.15)
+				ParticleFactory.land_dust(global_position + Vector2(0, 16))
+				AudioManager.play_sfx("land")
 
 	# ── Get physics multipliers ──
 	var speed_mult := PhysicsManager.get_current_speed_multiplier()
@@ -107,6 +127,9 @@ func _physics_process(delta: float) -> void:
 		if collider and collider.collision_layer & 0b10:  # Layer 2 = hazards
 			die()
 			break
+
+	# ── Update floor tracking ──
+	_was_on_floor = is_on_floor()
 
 
 # ─── Input Handling ─────────────────────────────────────────────────────────
@@ -176,6 +199,12 @@ func die() -> void:
 	velocity = Vector2.ZERO
 	EventBus.player_died.emit()
 
+	# Death juice: shake + flash + impact particles
+	ScreenEffects.shake_camera(12.0, 0.3)
+	ScreenEffects.flash_screen(Color.RED, 0.2)
+	ParticleFactory.impact(global_position, Color.RED, 20)
+	ScreenEffects.slow_motion(0.3, 0.3)
+
 	# Play death animation via animator (if exists)
 	var animator := get_node_or_null("AnimatedSprite2D")
 	if animator and animator.sprite_frames and animator.sprite_frames.has_animation("death"):
@@ -192,3 +221,37 @@ func respawn(spawn_position: Vector2) -> void:
 	velocity = Vector2.ZERO
 	_is_dead = false
 	EventBus.player_respawned.emit(spawn_position)
+
+
+# ─── Physics Change Effects ─────────────────────────────────────────────────
+
+## Colour lookup for physics state visual feedback.
+const STATE_COLORS: Dictionary = {
+	"Normal": Color.WHITE,
+	"ReverseGravity": Color(0, 1, 1),          # Cyan
+	"LowGravity": Color(0.5, 0.5, 1.0),        # Periwinkle
+	"HighGravity": Color(1, 0.2, 0.2),          # Red
+	"ZeroFriction": Color(0.67, 0.87, 1.0),     # Icy Blue
+	"SuperFriction": Color(0.55, 0.27, 0.07),   # Mud Brown
+	"BouncyPhysics": Color(1, 0.41, 0.71),      # Hot Pink
+}
+
+
+## Called when physics state changes. Triggers visual + audio feedback.
+func _on_physics_changed(state_name: String) -> void:
+	var color := STATE_COLORS.get(state_name, Color.WHITE) as Color
+
+	# Camera zoom pulse: briefly zoom in then back
+	ScreenEffects.zoom_camera(1.15, 0.1)
+	await get_tree().create_timer(0.15).timeout
+	ScreenEffects.zoom_camera(1.0, 0.3)
+
+	# Screen flash with state colour
+	ScreenEffects.flash_screen(color, 0.2)
+
+	# Particle burst at player position
+	if not _is_dead:
+		ParticleFactory.physics_change_burst(global_position, color)
+
+	# Play state change SFX
+	AudioManager.play_sfx("physics_change")
