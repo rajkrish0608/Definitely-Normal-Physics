@@ -26,9 +26,9 @@ func _on_play_pressed() -> void:
 	AudioManager.play_sfx("button_click")
 	
 	# Load last played level or start from 1-1
-	var last_world := 1
-	var last_level := 1
-	# TODO: Query SaveManager for last played level
+	var last_level_data = SaveManager.get_setting("last_played", {"world": 1, "level": 1})
+	var last_world: int = last_level_data.get("world", 1)
+	var last_level: int = last_level_data.get("level", 1)
 	
 	LevelManager.load_level(last_world, last_level)
 

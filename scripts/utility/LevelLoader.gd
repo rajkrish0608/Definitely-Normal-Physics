@@ -23,9 +23,16 @@ class_name LevelLoader
 extends RefCounted
 
 
+## Dictionary to store pooled nodes by type.
+static var _pool: Dictionary = {}
+
+
 ## Loads a level from a JSON file and returns the constructed Node2D scene.
 ## Returns null if loading fails.
 static func load_level(json_path: String) -> Node2D:
+	# Clear pool at start of level load to avoid stale references
+	_pool.clear()
+	
 	if not FileAccess.file_exists(json_path):
 		push_error("[LevelLoader] JSON file not found: %s" % json_path)
 		return null
@@ -102,52 +109,63 @@ static func _build_level(data: Dictionary) -> Node2D:
 
 ## Creates a platform StaticBody2D from JSON data.
 static func _create_platform(data: Dictionary) -> StaticBody2D:
-	var platform := StaticBody2D.new()
+	var platform := _get_from_pool("platform") as StaticBody2D
+	if not platform:
+		platform = StaticBody2D.new()
+		var collision := CollisionShape2D.new()
+		collision.shape = RectangleShape2D.new()
+		platform.add_child(collision)
+		var rect := ColorRect.new()
+		platform.add_child(rect)
+
 	platform.position = _parse_vec2(data.get("position", [0, 0]))
-	platform.collision_layer = 0b10  # Layer 2 (World)
+	platform.collision_layer = 0b10 
 	platform.collision_mask = 0
 
 	var size := _parse_vec2(data.get("size", [64, 32]))
-	var shape := RectangleShape2D.new()
-	shape.size = size
-
-	var collision := CollisionShape2D.new()
-	collision.shape = shape
-	platform.add_child(collision)
-
-	# Visual representation (colored rectangle)
-	var rect := ColorRect.new()
-	rect.color = Color(0.5, 0.5, 0.5)  # Gray
-	rect.size = size
-	rect.position = -size / 2
-	platform.add_child(rect)
+	platform.get_child(0).shape.size = size
+	platform.get_child(1).size = size
+	platform.get_child(1).position = -size / 2
 
 	return platform
 
 
 ## Creates a hazard Area2D from JSON data.
 static func _create_hazard(data: Dictionary) -> Area2D:
-	var hazard := Area2D.new()
+	var hazard := _get_from_pool("hazard") as Area2D
+	if not hazard:
+		hazard = Area2D.new()
+		var collision := CollisionShape2D.new()
+		collision.shape = RectangleShape2D.new()
+		hazard.add_child(collision)
+		var rect := ColorRect.new()
+		hazard.add_child(rect)
+
 	hazard.position = _parse_vec2(data.get("position", [0, 0]))
-	hazard.collision_layer = 0b10  # Layer 2 (World/Hazards)
-	hazard.collision_mask = 0b01   # Mask 1 (Player)
+	hazard.collision_layer = 0b10
+	hazard.collision_mask = 0b01
 
 	var size := Vector2(32, 32)
-	var shape := RectangleShape2D.new()
-	shape.size = size
-
-	var collision := CollisionShape2D.new()
-	collision.shape = shape
-	hazard.add_child(collision)
-
-	# Visual (red rectangle)
-	var rect := ColorRect.new()
-	rect.color = Color(1, 0, 0, 0.8)  # Red
-	rect.size = size
-	rect.position = -size / 2
-	hazard.add_child(rect)
+	hazard.get_child(0).shape.size = size
+	hazard.get_child(1).size = size
+	hazard.get_child(1).position = -size / 2
+	hazard.get_child(1).color = Color(1, 0, 0, 0.8)
 
 	return hazard
+
+
+## Internal helper to get a node from the pool or return null.
+static func _get_from_pool(type: String) -> Node:
+	if _pool.has(type) and _pool[type].size() > 0:
+		return _pool[type].pop_back()
+	return null
+
+
+## Internal helper to return a node to the pool.
+static func _return_to_pool(type: String, node: Node) -> void:
+	if not _pool.has(type):
+		_pool[type] = []
+	_pool[type].append(node)
 
 
 ## Creates a physics trigger from JSON data.

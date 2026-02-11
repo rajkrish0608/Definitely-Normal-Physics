@@ -62,9 +62,9 @@ func _physics_process(delta: float) -> void:
 	var gravity := PhysicsManager.get_current_gravity()
 	if not is_on_floor():
 		velocity += gravity * delta
-		_coyote_timer -= delta
+		_coyote_timer = max(0, _coyote_timer - delta)
 	else:
-		_coyote_timer = COYOTE_TIME
+		_coyote_timer = GameConstants.COYOTE_TIME
 		# Apply bounce if landing
 		if velocity.dot(gravity.normalized()) > 0 and PhysicsManager.current_state.bounce > 0:
 			var bounce_factor := PhysicsManager.current_state.bounce
@@ -83,10 +83,10 @@ func _physics_process(delta: float) -> void:
 
 	if input_dir != 0:
 		# Accelerate toward target speed
-		velocity.x = move_toward(velocity.x, target_speed, ACCELERATION * delta)
+		velocity.x = move_toward(velocity.x, target_speed, GameConstants.ACCELERATION if is_on_floor() else GameConstants.ACCELERATION * 0.5 * delta)
 	else:
 		# Apply friction
-		var decel := ACCELERATION * (1.0 + friction) * delta
+		var decel := GameConstants.ACCELERATION * (1.0 + friction) * delta
 		velocity.x = move_toward(velocity.x, 0, decel)
 
 	# ── Jump ──
@@ -118,18 +118,52 @@ func _get_input_direction(reversed: bool, delay: float, delta: float) -> float:
 		raw_dir = -raw_dir
 
 	if delay > 0:
-		# Queue-based delay (simplified: just delay the entire input)
-		# For proper implementation, track each action separately
-		return raw_dir  # TODO: Implement proper input delay queue
+		_input_queue.append({
+			"type": "axis",
+			"value": raw_dir,
+			"time": Time.get_ticks_msec() + (delay * 1000.0)
+		})
+		
+		# Return the oldest valid axis value in the queue
+		var current_time := Time.get_ticks_msec()
+		var active_val := 0.0
+		var to_remove := []
+		
+		for i in range(_input_queue.size()):
+			var input = _input_queue[i]
+			if input.type == "axis" and current_time >= input.time:
+				active_val = input.value
+				to_remove.append(i)
+		
+		# Clean up old entries (keep only the latest one that fired)
+		for i in range(to_remove.size() - 1, -1, -1):
+			_input_queue.remove_at(to_remove[i])
+			
+		return active_val
+		
 	return raw_dir
 
 
 ## Returns true if jump was just pressed (with optional delay).
 func _is_jump_pressed(delay: float, delta: float) -> bool:
+	var pressed := Input.is_action_just_pressed("jump")
+	
 	if delay > 0:
-		# TODO: Implement input delay queue
-		return Input.is_action_just_pressed("jump")
-	return Input.is_action_just_pressed("jump")
+		if pressed:
+			_input_queue.append({
+				"type": "jump",
+				"time": Time.get_ticks_msec() + (delay * 1000.0)
+			})
+		
+		var current_time := Time.get_ticks_msec()
+		for i in range(_input_queue.size()):
+			var input = _input_queue[i]
+			if input.type == "jump" and current_time >= input.time:
+				_input_queue.remove_at(i)
+				return true
+		return false
+		
+	return pressed
 
 
 # ─── Death & Respawn ────────────────────────────────────────────────────────

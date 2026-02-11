@@ -48,13 +48,24 @@ func _ready() -> void:
 		hide()
 		return
 
-	# Position controls
-	if joystick_base:
-		joystick_base.position = Vector2(100, get_viewport().size.y - 150)
+	# Position controls initially
+	_update_positions()
+	
+	# Connect to viewport size change signal
+	get_viewport().size_changed.connect(_update_positions)
 	
 	if jump_button:
-		jump_button.position = Vector2(get_viewport().size.x - 100, get_viewport().size.y - 100)
 		jump_button.pressed.connect(_on_jump_pressed)
+
+
+## Updates positions based on current viewport size.
+func _update_positions() -> void:
+	var viewport_size := get_viewport().get_visible_rect().size
+	if joystick_base:
+		joystick_base.position = Vector2(120, viewport_size.y - 120)
+	
+	if jump_button:
+		jump_button.position = Vector2(viewport_size.x - 150, viewport_size.y - 120)
 
 
 func _input(event: InputEvent) -> void:

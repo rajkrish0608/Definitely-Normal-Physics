@@ -10,6 +10,10 @@
 extends AnimatedSprite2D
 
 
+## Emitted when a specific frame event is triggered (e.g. "footstep").
+signal frame_event_triggered(event_name: String)
+
+
 # ─── State ───────────────────────────────────────────────────────────────────
 
 ## Reference to parent player controller.
@@ -30,8 +34,20 @@ func _ready() -> void:
 		push_error("[PlayerAnimator] Parent must be CharacterBody2D with PlayerController.gd")
 		return
 
+	# Listen to frame changes for triggers
+	frame_changed.connect(_on_frame_changed)
+	
 	# Listen to physics changes for visual effects
 	EventBus.physics_changed.connect(_on_physics_changed)
+
+
+func _on_frame_changed() -> void:
+	# Boilerplate for frame-specific events (e.g. footsteps on frames 2 and 5 of run)
+	if animation == "run":
+		if frame == 1 or frame == 4:
+			frame_event_triggered.emit("footstep")
+			if AudioManager:
+				AudioManager.play_sfx("footstep", 0.5)
 
 
 func _process(_delta: float) -> void:
