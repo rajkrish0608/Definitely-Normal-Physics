@@ -100,6 +100,11 @@ func load_next_level() -> void:
 	load_level(next_world, next_level)
 
 
+## Reloads the current level (for debug/hotloader).
+func reload_current_level() -> void:
+	load_level(current_world, current_level)
+
+
 ## Called after a new level scene finishes loading.
 ## Resets counters, finds player, sets checkpoint.
 func on_level_start() -> void:

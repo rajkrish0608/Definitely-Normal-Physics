@@ -1,0 +1,63 @@
+[gd_scene load_steps=2 format=3 uid="uid://debug_overlay_scene"]
+
+[ext_resource type="Script" path="res://scripts/ui/DebugOverlay.gd" id="1"]
+
+[node name="DebugOverlay" type="CanvasLayer"]
+layer = 100
+script = ExtResource("1")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 420.0
+offset_bottom = 520.0
+
+[node name="VBox" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+
+[node name="Title" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+text = "Debug Overlay (F1 to toggle)"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="StatsLabel" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+text = "FPS: 60 | Physics: Normal"
+
+[node name="HSeparator2" type="HSeparator" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+text = "Level Jump:"
+
+[node name="LevelList" type="ItemList" parent="Panel/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HSeparator3" type="HSeparator" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+text = "Force Physics State:"
+
+[node name="PhysicsButtons" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="HSeparator4" type="HSeparator" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="ValidateButton" type="Button" parent="Panel/VBox"]
+layout_mode = 2
+text = "Validate All Levels"
