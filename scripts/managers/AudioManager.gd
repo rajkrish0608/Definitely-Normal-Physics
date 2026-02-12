@@ -88,8 +88,11 @@ func play_music(track_name: String, fade_duration: float = 1.0) -> void:
 
 	var path := "res://assets/audio/music/%s.ogg" % track_name
 	if not ResourceLoader.exists(path):
-		push_warning("[AudioManager] Music not found: %s" % path)
-		return
+		# Fallback to .wav
+		path = "res://assets/audio/music/%s.wav" % track_name
+		if not ResourceLoader.exists(path):
+			push_warning("[AudioManager] Music not found: %s (.ogg/.wav)" % track_name)
+			return
 
 	var stream := load(path) as AudioStream
 	if not stream:
@@ -136,8 +139,11 @@ func stop_music(fade_duration: float = 1.0) -> void:
 func play_sfx(sfx_name: String, volume_modifier: float = 1.0) -> void:
 	var path := "res://assets/audio/sfx/%s.ogg" % sfx_name
 	if not ResourceLoader.exists(path):
-		# Silently fail for missing SFX (not critical)
-		return
+		# Fallback to .wav
+		path = "res://assets/audio/sfx/%s.wav" % sfx_name
+		if not ResourceLoader.exists(path):
+			# Silently fail for missing SFX (not critical)
+			return
 
 	var stream := load(path) as AudioStream
 	if not stream:
