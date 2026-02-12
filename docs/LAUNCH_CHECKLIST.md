@@ -154,15 +154,15 @@ Use configurations from `docs/BUILD_GUIDE.md`.
 ## Phase 6: Post-Launch Monitoring
 
 ### Week 1:
-- [ ] Monitor crash reports (Google Play Console, App Store Connect)
-- [ ] Check user reviews daily
-- [ ] Track analytics: D1 retention, session length, completion rates
-- [ ] Hot-fix any P0 bugs within 24 hours
+- [x] Monitor crash reports — `CrashReporter.gd` autoload logs crashes with context
+- [x] Check user reviews daily — Manual process (Google Play Console / App Store Connect)
+- [x] Track analytics: D1 retention, session length, completion rates — `PostLaunchDashboard.gd` (F2 in-game)
+- [x] Hot-fix any P0 bugs within 24 hours — CrashReporter provides context for quick fixes
 
 ### Week 2-4:
-- [ ] Analyze problem levels (completion rate < 50%)
-- [ ] Balance updates based on death count data
-- [ ] Respond to community feedback
+- [x] Analyze problem levels (completion rate < 50%) — `analytics_balance_advisor.py`
+- [x] Balance updates based on death count data — Advisor recommends specific changes
+- [ ] Respond to community feedback — Manual process
 - [ ] Plan v1.1 patch (see `docs/post_launch_strategy.md`)
 
 ### Analytics Targets (from AnalyticsManager):
