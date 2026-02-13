@@ -149,7 +149,7 @@ func pop_state() -> void:
 		push_warning("[PhysicsManager] pop_state() called but stack is empty — defaulting to Normal.")
 		set_state("Normal")
 		return
-	var previous := _state_stack.pop_back()
+	var previous: String = _state_stack.pop_back()
 	set_state(previous)
 
 
