@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=2 format=3 uid="uid://cgyqy4g1cjpxn"]
 
 [ext_resource type="Script" path="res://scenes/TestLevel.gd" id="1"]
 
