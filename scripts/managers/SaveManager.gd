@@ -81,7 +81,7 @@ func load_game() -> void:
 		_data = _create_default_data()
 		return
 
-	var json_text := file.get_as_text()
+	var json_text: String = file.get_as_text()
 	file.close()
 
 	var json := JSON.new()

@@ -42,7 +42,7 @@ static func load_level(json_path: String) -> Node2D:
 		push_error("[LevelLoader] Cannot open file: %s" % json_path)
 		return null
 
-	var json_text := file.get_as_text()
+	var json_text: String = file.get_as_text()
 	file.close()
 
 	var json := JSON.new()

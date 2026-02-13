@@ -108,7 +108,7 @@ func set_state(state_name: String, instant: bool = false) -> void:
 	if current_state:
 		current_state.on_exit()
 
-	var old_name: String = current_state.get_state_name() if current_state else "None"
+	var old_name := current_state.get_state_name() if current_state else "None"
 
 	# ── Enter new state ──
 	current_state = new_state
@@ -149,7 +149,7 @@ func pop_state() -> void:
 		push_warning("[PhysicsManager] pop_state() called but stack is empty — defaulting to Normal.")
 		set_state("Normal")
 		return
-	var previous: String = _state_stack.pop_back()
+	var previous := _state_stack.pop_back()
 	set_state(previous)
 
 

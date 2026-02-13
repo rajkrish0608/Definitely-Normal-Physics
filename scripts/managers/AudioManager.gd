@@ -42,14 +42,14 @@ func _ready() -> void:
 ## Creates audio buses for separate music/SFX volume control.
 func _setup_audio_buses() -> void:
 	# Check if buses already exist
-	var music_bus := AudioServer.get_bus_index("Music")
+	var music_bus: int = AudioServer.get_bus_index("Music")
 	if music_bus == -1:
 		AudioServer.add_bus()
 		music_bus = AudioServer.bus_count - 1
 		AudioServer.set_bus_name(music_bus, "Music")
 		AudioServer.set_bus_send(music_bus, "Master")
 
-	var sfx_bus := AudioServer.get_bus_index("SFX")
+	var sfx_bus: int = AudioServer.get_bus_index("SFX")
 	if sfx_bus == -1:
 		AudioServer.add_bus()
 		sfx_bus = AudioServer.bus_count - 1
@@ -183,11 +183,11 @@ func set_sfx_volume(volume: float) -> void:
 
 ## Gets current music volume (0.0 - 1.0).
 func get_music_volume() -> float:
-	var db := AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Music"))
+	var db: float = AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Music"))
 	return db_to_linear(db)
 
 
 ## Gets current SFX volume (0.0 - 1.0).
 func get_sfx_volume() -> float:
-	var db := AudioServer.get_bus_volume_db(AudioServer.get_bus_index("SFX"))
+	var db: float = AudioServer.get_bus_volume_db(AudioServer.get_bus_index("SFX"))
 	return db_to_linear(db)

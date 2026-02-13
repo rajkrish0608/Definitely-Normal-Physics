@@ -79,7 +79,7 @@ func _determine_animation() -> String:
 
 	if not on_floor:
 		# Check if moving up or down relative to gravity
-		var gravity_dir := PhysicsManager.get_current_gravity().normalized()
+		var gravity_dir: Vector2 = PhysicsManager.get_current_gravity().normalized()
 		var vertical_vel := vel.dot(gravity_dir)
 		if vertical_vel < -50:  # Moving against gravity = jumping
 			return "jump"
@@ -98,7 +98,7 @@ func _determine_animation() -> String:
 ## Called when PhysicsManager switches states.
 ## Rotates sprite if gravity is reversed.
 func _on_physics_changed(state_name: String) -> void:
-	var gravity_dir := PhysicsManager.get_current_gravity().normalized()
+	var gravity_dir: Vector2 = PhysicsManager.get_current_gravity().normalized()
 
 	# Flip sprite upside-down if gravity is reversed
 	if gravity_dir.y < 0:  # Gravity pulls upward

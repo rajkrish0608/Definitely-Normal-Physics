@@ -68,7 +68,7 @@ func _physics_process(delta: float) -> void:
 		return
 
 	# ── Gravity ──
-	var gravity := PhysicsManager.get_current_gravity()
+	var gravity: Vector2 = PhysicsManager.get_current_gravity()
 	if not is_on_floor():
 		velocity += gravity * delta
 		_coyote_timer = max(0, _coyote_timer - delta)
@@ -91,9 +91,9 @@ func _physics_process(delta: float) -> void:
 				AudioManager.play_sfx("land")
 
 	# ── Get physics multipliers ──
-	var speed_mult := PhysicsManager.get_current_speed_multiplier()
-	var jump_mult := PhysicsManager.get_current_jump_multiplier()
-	var friction := PhysicsManager.get_current_friction()
+	var speed_mult: float = PhysicsManager.get_current_speed_multiplier()
+	var jump_mult: float = PhysicsManager.get_current_jump_multiplier()
+	var friction: float = PhysicsManager.get_current_friction()
 	var controls_reversed := PhysicsManager.current_state.controls_reversed
 	var input_delay := PhysicsManager.current_state.input_delay
 
@@ -123,7 +123,7 @@ func _physics_process(delta: float) -> void:
 	# ── Collision-based death (hazards on layer 2) ──
 	for i in get_slide_collision_count():
 		var collision := get_slide_collision(i)
-		var collider := collision.get_collider()
+		var collider: Object = collision.get_collider()
 		if collider and collider.collision_layer & 0b10:  # Layer 2 = hazards
 			die()
 			break
@@ -136,7 +136,7 @@ func _physics_process(delta: float) -> void:
 
 ## Returns -1 (left), 0 (neutral), or +1 (right).
 func _get_input_direction(reversed: bool, delay: float, delta: float) -> float:
-	var raw_dir := Input.get_axis("move_left", "move_right")
+	var raw_dir: float = Input.get_axis("move_left", "move_right")
 	if reversed:
 		raw_dir = -raw_dir
 
@@ -148,7 +148,7 @@ func _get_input_direction(reversed: bool, delay: float, delta: float) -> float:
 		})
 		
 		# Return the oldest valid axis value in the queue
-		var current_time := Time.get_ticks_msec()
+		var current_time: int = Time.get_ticks_msec()
 		var active_val := 0.0
 		var to_remove := []
 		
@@ -178,7 +178,7 @@ func _is_jump_pressed(delay: float, delta: float) -> bool:
 				"time": Time.get_ticks_msec() + (delay * 1000.0)
 			})
 		
-		var current_time := Time.get_ticks_msec()
+		var current_time: int = Time.get_ticks_msec()
 		for i in range(_input_queue.size()):
 			var input = _input_queue[i]
 			if input.type == "jump" and current_time >= input.time:
