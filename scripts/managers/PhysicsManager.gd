@@ -197,6 +197,13 @@ func get_all_state_names() -> Array[String]:
 	return names
 
 
+## Returns the name of the currently active physics state.
+func get_current_state_name() -> String:
+	if current_state:
+		return current_state.get_state_name()
+	return "None"
+
+
 # ─── Internal Helpers ────────────────────────────────────────────────────────
 
 ## Plays a sound effect through AudioManager if the singleton is available.
