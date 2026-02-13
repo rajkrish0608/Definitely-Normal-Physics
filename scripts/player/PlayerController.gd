@@ -212,7 +212,9 @@ func die() -> void:
 		await animator.animation_finished
 
 	# Respawn handled by LevelManager
-	_is_dead = false
+	# Respawn handled by LevelManager
+	# _is_dead = false  <-- Removed to prevent loop; respawn() handles this
+
 
 
 ## Called by LevelManager to respawn at checkpoint.

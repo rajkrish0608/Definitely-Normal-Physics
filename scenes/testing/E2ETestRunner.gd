@@ -96,6 +96,11 @@ func test_player_spawns() -> void:
 	if spawn:
 		player.global_position = spawn.global_position
 		add_child(player)
+		
+		# Register with LevelManager so death/respawn works
+		LevelManager.player = player
+		LevelManager.checkpoint_position = player.global_position
+		
 		pass_test("Player spawned at position: " + str(player.global_position))
 	else:
 		fail_test("PlayerSpawn marker not found in level")

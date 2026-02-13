@@ -19,6 +19,11 @@ func _ready() -> void:
 		var cam: Camera2D = Camera2D.new()
 		cam.enabled = true
 		player.add_child(cam)
+		
+		# Register player with LevelManager for respawning
+		LevelManager.player = player
+		LevelManager.checkpoint_position = player.global_position
+
 
 
 func _create_test_player() -> CharacterBody2D:
