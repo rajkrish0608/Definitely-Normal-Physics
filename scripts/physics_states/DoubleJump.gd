@@ -12,14 +12,14 @@ func update_physics(delta: float, player: CharacterBody2D) -> void:
 func handle_jump(player: CharacterBody2D, velocity: Vector2, jump_velocity: float) -> Vector2:
 	if player.is_on_floor():
 		AudioManager.play_sfx("jump")
-		velocity.y = jump_velocity * jump_multiplier
-		return velocity
+		return super.handle_jump(player, velocity, jump_velocity)
 	elif _can_double_jump:
 		_can_double_jump = false
 		AudioManager.play_sfx("jump") # Different sound ideally
-		velocity.y = jump_velocity * jump_multiplier
 		ParticleFactory.impact(player.global_position, Color.CYAN, 5) # Visual feedback
-		return velocity
+		return super.handle_jump(player, velocity, jump_velocity)
+		
+	return velocity
 		
 	return velocity
 

@@ -18,7 +18,7 @@ extends CharacterBody2D
 const BASE_SPEED: float = 300.0
 
 ## Base jump velocity (negative = upward).
-const BASE_JUMP_VELOCITY: float = 500.0
+const BASE_JUMP_VELOCITY: float = 600.0
 
 ## Acceleration when starting/changing direction (pixels/s²).
 const ACCELERATION: float = 2000.0
@@ -110,6 +110,9 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, decel)
 
 	# ── Jump ──
+	if Input.is_action_just_pressed("jump"):
+		print("[PlayerController] Jump action detected! Floor: ", is_on_floor(), " Coyote: ", _coyote_timer)
+		
 	if _is_jump_pressed(input_delay, delta):
 		if is_on_floor() or _coyote_timer > 0 or PhysicsManager.current_state.get_state_name() == "DoubleJump":
 			# Use the state's handle_jump for custom logic
