@@ -103,10 +103,10 @@ func _physics_process(delta: float) -> void:
 
 	if input_dir != 0:
 		# Accelerate toward target speed
-		velocity.x = move_toward(velocity.x, target_speed, GameConstants.ACCELERATION if is_on_floor() else GameConstants.ACCELERATION * 0.5 * delta)
+		velocity.x = move_toward(velocity.x, target_speed, ACCELERATION if is_on_floor() else ACCELERATION * 0.5 * delta)
 	else:
 		# Apply friction
-		var decel := GameConstants.ACCELERATION * (1.0 + friction) * delta
+		var decel: float = ACCELERATION * (1.0 + friction) * delta
 		velocity.x = move_toward(velocity.x, 0, decel)
 
 	# ── Jump ──
