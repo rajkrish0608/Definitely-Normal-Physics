@@ -18,7 +18,7 @@ extends CharacterBody2D
 const BASE_SPEED: float = 300.0
 
 ## Base jump velocity (negative = upward).
-const BASE_JUMP_VELOCITY: float = -500.0
+const BASE_JUMP_VELOCITY: float = 500.0
 
 ## Acceleration when starting/changing direction (pixels/s²).
 const ACCELERATION: float = 2000.0
@@ -74,7 +74,7 @@ func _physics_process(delta: float) -> void:
 		_coyote_timer = max(0, _coyote_timer - delta)
 		_last_velocity_y = velocity.y
 	else:
-		_coyote_timer = GameConstants.COYOTE_TIME
+		_coyote_timer = COYOTE_TIME
 		# Apply bounce if landing
 		if velocity.dot(gravity.normalized()) > 0 and PhysicsManager.current_state.bounce > 0:
 			var bounce_factor := PhysicsManager.current_state.bounce
