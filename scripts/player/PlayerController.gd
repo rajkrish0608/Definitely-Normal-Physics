@@ -111,20 +111,19 @@ func _physics_process(delta: float) -> void:
 
 	# ── Jump ──
 	if _is_jump_pressed(input_delay, delta):
-		if is_on_floor() or _coyote_timer > 0:
-			# Determine jump direction based on gravity
-			var jump_dir := -gravity.normalized()
-			velocity += jump_dir * BASE_JUMP_VELOCITY * jump_mult
+		if is_on_floor() or _coyote_timer > 0 or PhysicsManager.current_state.get_state_name() == "DoubleJump":
+			# Use the state's handle_jump for custom logic
+			velocity = PhysicsManager.current_state.handle_jump(self, velocity, BASE_JUMP_VELOCITY * jump_mult)
 			_coyote_timer = 0  # Consume coyote time
 
 	# ── Apply movement ──
 	move_and_slide()
 
-	# ── Collision-based death (hazards on layer 2) ──
+	# ── Collision-based death (hazards on layer 4) ──
 	for i in get_slide_collision_count():
 		var collision := get_slide_collision(i)
 		var collider: Object = collision.get_collider()
-		if collider and collider.collision_layer & 0b10:  # Layer 2 = hazards
+		if collider and collider.collision_layer & 0b1000:  # Layer 4 = hazards
 			die()
 			break
 
@@ -211,7 +210,6 @@ func die() -> void:
 		animator.play("death")
 		await animator.animation_finished
 
-	# Respawn handled by LevelManager
 	# Respawn handled by LevelManager
 	# _is_dead = false  <-- Removed to prevent loop; respawn() handles this
 

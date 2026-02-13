@@ -85,6 +85,15 @@ func on_exit() -> void:
 ## changes, pulsating gravity).
 ## [param delta]  Physics frame delta time.
 ## [param player] Reference to the CharacterBody2D player node.
+## Called when the jump action is pressed.
+## Override to provide custom jump logic (e.g., double jump, teleport).
+## Should return the modified velocity.
+func handle_jump(_player: CharacterBody2D, velocity: Vector2, jump_velocity: float) -> Vector2:
+	# Default behavior: standard jump
+	var gravity: Vector2 = PhysicsManager.get_current_gravity()
+	var jump_dir := -gravity.normalized()
+	return velocity + jump_dir * jump_velocity
+
 func update_physics(_delta: float, _player: CharacterBody2D) -> void:
 	pass
 

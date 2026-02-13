@@ -125,7 +125,7 @@ static func _create_platform(data: Dictionary) -> StaticBody2D:
 	var size := _parse_vec2(data.get("size", [64, 32]))
 	platform.get_child(0).shape.size = size
 	platform.get_child(1).size = size
-	platform.get_child(1).position = -size / 2
+	platform.get_child(1).position = -size / 2.0
 
 	return platform
 
@@ -142,13 +142,13 @@ static func _create_hazard(data: Dictionary) -> Area2D:
 		hazard.add_child(rect)
 
 	hazard.position = _parse_vec2(data.get("position", [0, 0]))
-	hazard.collision_layer = 0b10
+	hazard.collision_layer = 0b1000 # Layer 4 = Hazards
 	hazard.collision_mask = 0b01
 
 	var size := Vector2(32, 32)
 	hazard.get_child(0).shape.size = size
 	hazard.get_child(1).size = size
-	hazard.get_child(1).position = -size / 2
+	hazard.get_child(1).position = -size / 2.0
 	hazard.get_child(1).color = Color(1, 0, 0, 0.8)
 
 	return hazard

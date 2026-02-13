@@ -3,7 +3,7 @@ extends PhysicsState
 
 const TELEPORT_DISTANCE: float = 150.0
 
-func handle_jump(player: CharacterBody2D, velocity: Vector2, jump_velocity: float) -> Vector2:
+func handle_jump(player: CharacterBody2D, velocity: Vector2, _jump_velocity: float) -> Vector2:
 	# Teleport forward/up instead of normal jump physics
 	var direction := Vector2.UP.rotated(player.rotation)
 	
