@@ -9,7 +9,7 @@
 
 config/name="Definitely Normal Physics"
 config/description="A 2D troll platformer where physics rules change unexpectedly mid-level."
-run/main_scene=""
+run/main_scene="res://scenes/TestLevel.tscn"
 config/features=PackedStringArray("4.2", "Forward+")
 config/icon="res://icon.svg"
 
