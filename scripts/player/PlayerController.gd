@@ -135,7 +135,7 @@ func _physics_process(delta: float) -> void:
 # ─── Input Handling ─────────────────────────────────────────────────────────
 
 ## Returns -1 (left), 0 (neutral), or +1 (right).
-func _get_input_direction(reversed: bool, delay: float, delta: float) -> float:
+func _get_input_direction(reversed: bool, delay: float, _delta: float) -> float:
 	var raw_dir: float = Input.get_axis("move_left", "move_right")
 	if reversed:
 		raw_dir = -raw_dir
@@ -168,7 +168,7 @@ func _get_input_direction(reversed: bool, delay: float, delta: float) -> float:
 
 
 ## Returns true if jump was just pressed (with optional delay).
-func _is_jump_pressed(delay: float, delta: float) -> bool:
+func _is_jump_pressed(delay: float, _delta: float) -> bool:
 	var pressed := Input.is_action_just_pressed("jump")
 	
 	if delay > 0:
